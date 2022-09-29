@@ -1,0 +1,54 @@
+{
+  "components": [
+    {
+      "text": "Write your environment complain",
+      "type": "text",
+      "id": "Field_1ar9tfv",
+      "properties": {}
+    },
+    {
+      "type": "textfield",
+      "id": "Field_02xzxqz",
+      "key": "field_1kxa1je",
+      "description": "Write what your problem is about"
+    },
+    {
+      "values": [
+        {
+          "label": "Noise related",
+          "value": "noise"
+        },
+        {
+          "label": "Space related",
+          "value": "value2"
+        }
+      ],
+      "label": "Type of problem",
+      "type": "select",
+      "id": "Field_0imccuc",
+      "key": "field_118nu4r"
+    },
+    {
+      "label": "Write your email so we can respond to you",
+      "type": "textfield",
+      "id": "Field_1x9fgv4",
+      "key": "field_0dm5npp"
+    },
+    {
+      "action": "submit",
+      "label": "Button",
+      "type": "button",
+      "id": "Field_1lmh91q",
+      "key": "field_018odsv"
+    }
+  ],
+  "type": "default",
+  "id": "Form_environment_complain",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.3.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

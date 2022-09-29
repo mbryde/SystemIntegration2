@@ -1,0 +1,15 @@
+spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+
+camunda.bpm.admin-user:
+  id: demo
+  password: demo
+
+camunda.bpm.client:
+  base-url: http://localhost:8080/engine-rest # the URL pointing to the Camunda Platform Runtime REST API
+  lock-duration: 10000 # defines how many milliseconds the External Tasks are locked until they can be fetched again
+  subscriptions:
+    complainHandler:
+      # variable-names: customerId, creditScore # only fetch these two variables
+      process-definition-key: Process_1w7yh8o
+
+  logging.level.org.camunda.bpm.client: DEBUG # increase the log level of the application

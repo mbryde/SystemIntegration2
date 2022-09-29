@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "value": "environment",
+          "label": "Environment complain"
+        },
+        {
+          "value": "employee",
+          "label": "Employee complain"
+        },
+        {
+          "label": "Product complain",
+          "value": "product"
+        }
+      ],
+      "label": "Select the complain type",
+      "type": "select",
+      "id": "Field_1gcrkam",
+      "key": "choice",
+      "description": "You have three different complain options to choice from",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Go to next step in the complain process",
+      "type": "button",
+      "id": "Field_0owvu3t",
+      "key": "field_0poyljc"
+    }
+  ],
+  "type": "default",
+  "id": "Form_Step_1",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.3.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

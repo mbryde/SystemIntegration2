@@ -1,0 +1,70 @@
+{
+  "components": [
+    {
+      "label": "What store did you encounter the employee at?",
+      "type": "textfield",
+      "id": "Field_0kfodpn",
+      "key": "field_0qn5ai7",
+      "validate": {
+        "required": true
+      },
+      "description": "Please provide the address of the store where this employee is working"
+    },
+    {
+      "label": "Time of the encounter",
+      "type": "textfield",
+      "id": "Field_1pw6o1d",
+      "key": "field_1ulwlue",
+      "description": "Give a approximate timeframe of when you had the encouter with the employee",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Employee name",
+      "type": "textfield",
+      "id": "Field_1fofjq1",
+      "key": "field_0u50y34",
+      "description": "Please provided the employees name",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Complain",
+      "type": "textfield",
+      "id": "Field_125rjoe",
+      "key": "field_1pftpzl",
+      "description": "Please give a detailed version of your complain. So we can react on it as quickly as possible.",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "id": "Field_0vf2xne",
+      "key": "field_1ufiy2w",
+      "description": "Please provide us with a email to get back in touch with you.",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Submit complain",
+      "type": "button",
+      "id": "Field_1cwfevw",
+      "key": "field_10jt0u4"
+    }
+  ],
+  "type": "default",
+  "id": "Form_employee_complain",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.3.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

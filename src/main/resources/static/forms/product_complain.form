@@ -1,0 +1,74 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "value": "Bed ",
+          "label": "Bed"
+        },
+        {
+          "label": "Accessories",
+          "value": "Accessories"
+        },
+        {
+          "label": "Chairs",
+          "value": "Chair"
+        },
+        {
+          "label": "Table",
+          "value": "Table"
+        }
+      ],
+      "label": "Select category",
+      "type": "select",
+      "id": "Field_13wmjtl",
+      "key": "field_0q6hkii"
+    },
+    {
+      "label": "Tell what is wrong with your product",
+      "type": "textfield",
+      "id": "Field_1i0bfw0",
+      "key": "field_0rvpr63",
+      "description": "Type here",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "What is your name?",
+      "type": "textfield",
+      "id": "Field_1ifm3oe",
+      "key": "field_1p4dc76",
+      "description": "Type here",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "What is your e-mail?",
+      "type": "textfield",
+      "id": "Field_01js3xu",
+      "key": "field_1aw1esr",
+      "description": "Type here",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Send your complain",
+      "type": "button",
+      "id": "Field_0mct7hg",
+      "key": "field_142mx84"
+    }
+  ],
+  "type": "default",
+  "id": "Form_product_complain",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.3.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}
