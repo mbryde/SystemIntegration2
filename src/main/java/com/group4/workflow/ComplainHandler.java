@@ -17,7 +17,6 @@ public class ComplainHandler implements ExternalTaskHandler {
     @Override
     public void execute(ExternalTask externalTask, ExternalTaskService externalTaskService) {
         //Get info from form
-        String customerId = externalTask.getVariable("field_118nu4r");
 
         /*String store = externalTask.getVariable("field_0qn5ai7");
         String timeOfEncounter = externalTask.getVariable("field_1ulwlue");
@@ -28,29 +27,38 @@ public class ComplainHandler implements ExternalTaskHandler {
 
         //Make msg based on data from the form
         String msg="";
-        //Customer
+        //Employee
         if(externalTask.getVariable("field_0u50y34") != null){
+            String customerId = externalTask.getVariable("field_1ufiy2w");
             String employeeName = externalTask.getVariable("field_0u50y34");
+            System.out.println("Employee name: " + employeeName);
             msg = "Dear " + customerId + ",\n\nThank you for your complaint. We will look into it and get back to you as soon as possible.\n\nBest regards,\nCustomer Service"+
                     "We were sad to hear about your experience with our employee" +employeeName+" we at ikea strive to give the best service possible and will evaluate if we need to take any action regarding this employee";
             writeToFile(msg,"EmployeeComplain");
+            new Java_Send_Mail().Send_Email2("Employee complain","mattibenhansen@gmail.com",msg);
+
 
         }
 
         //environment
         if(externalTask.getVariable("field_1kxa1je") != null){
+            String customerId = externalTask.getVariable("field_018odsv");
             String complainInfoField = externalTask.getVariable("field_1kxa1je");
+            System.out.println(complainInfoField);
             msg = "Dear " + customerId + ",\n\nThank you for your complaint. We will look into it and get back to you as soon as possible.\n\nBest regards,\nCustomer Service"+
                     "We were sad to hear about your experience with our environment we at ikea strive to have the best environment possible and will evaluate if we need to take any action regarding this issue";
             writeToFile(msg,"EnvironmentComplain");
-
+            new Java_Send_Mail().Send_Email2("Environment complain","mattibenhansen@gmail.com",msg);
         }
 
         //Product
         if(externalTask.getVariable("field_0rvpr63") != null){
+            String customerId = externalTask.getVariable("field_1aw1esr");
             String productType = externalTask.getVariable("field_0q6hkii");
+            System.out.println(productType);
             msg = "Dear " + customerId + ",\n\nThank you for your complaint. We will look into it and get back to you as soon as possible.\n\nBest regards,\nCustomer Service"+
-                    "We were sad to hear about your experience with our product" +productType+" we at ikea strive to have the best quality possible and will evaluate if we need to take any action regarding this product";
+                    "\nWe were sad to hear about your experience with our product" +productType+" we at ikea strive to have the best quality possible and will evaluate if we need to take any action regarding this product";
+            new Java_Send_Mail().Send_Email2("Product complain","mattibenhansen@gmail.com",msg);
             writeToFile(msg,"ProductComplain");
         }
 
@@ -58,7 +66,6 @@ public class ComplainHandler implements ExternalTaskHandler {
 
 
         externalTaskService.complete(externalTask);
-        System.out.println(customerId);
     }
 
     public boolean writeToFile(String msg, String type) {
