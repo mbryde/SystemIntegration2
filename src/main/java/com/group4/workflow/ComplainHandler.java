@@ -34,7 +34,6 @@ public class ComplainHandler implements ExternalTaskHandler {
             System.out.println("Employee name: " + employeeName);
             msg = "Dear " + customerId + ",\n\nThank you for your complaint. We will look into it and get back to you as soon as possible.\n\nBest regards,\nCustomer Service"+
                     "We were sad to hear about your experience with our employee" +employeeName+" we at ikea strive to give the best service possible and will evaluate if we need to take any action regarding this employee";
-            writeToFile(msg,"EmployeeComplain");
             new Java_Send_Mail().Send_Email2("Employee complain","mattibenhansen@gmail.com",msg);
 
 
@@ -47,7 +46,6 @@ public class ComplainHandler implements ExternalTaskHandler {
             System.out.println(complainInfoField);
             msg = "Dear " + customerId + ",\n\nThank you for your complaint. We will look into it and get back to you as soon as possible.\n\nBest regards,\nCustomer Service"+
                     "We were sad to hear about your experience with our environment we at ikea strive to have the best environment possible and will evaluate if we need to take any action regarding this issue";
-            writeToFile(msg,"EnvironmentComplain");
             new Java_Send_Mail().Send_Email2("Environment complain","mattibenhansen@gmail.com",msg);
         }
 
@@ -59,7 +57,6 @@ public class ComplainHandler implements ExternalTaskHandler {
             msg = "Dear " + customerId + ",\n\nThank you for your complaint. We will look into it and get back to you as soon as possible.\n\nBest regards,\nCustomer Service"+
                     "\nWe were sad to hear about your experience with our product" +productType+" we at ikea strive to have the best quality possible and will evaluate if we need to take any action regarding this product";
             new Java_Send_Mail().Send_Email2("Product complain","mattibenhansen@gmail.com",msg);
-            writeToFile(msg,"ProductComplain");
         }
 
         //Write to file
